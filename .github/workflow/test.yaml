@@ -8,6 +8,7 @@ on:
 
 jobs:
   test-repo:
+    runs-on: ubuntu-latest
     steps:
       - name: "Testing the application"
         run: pwd && ls 
