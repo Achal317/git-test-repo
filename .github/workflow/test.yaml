@@ -1,0 +1,13 @@
+name: "Test the repos workflow"
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  test-repo:
+    steps:
+      - name: "Testing the application"
+        run: pwd && ls 
