@@ -10,5 +10,11 @@ jobs:
   test-repo:
     runs-on: ubuntu-latest
     steps:
-      - name: "Testing the application"
-        run: pwd && ls 
+      - name: "Checkout repos"
+        uses: actions/checkout@v4
+
+      - name: "Curl installation"
+        run: apk --no-cache add curl
+
+      - name: "Script checking"
+        run: ./check.sh 
